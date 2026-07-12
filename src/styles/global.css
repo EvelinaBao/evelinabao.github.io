@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-paper: #FAF7F1;
+  --color-card: #FFFFFF;
+  --color-ink: #23272F;
+  --color-muted: #5E626B;
+  --color-line: #E7E2EC;
+  --color-lavender: #996C96;
+  --color-lavender-deep: #6E4A6C;
+  --color-lavender-soft: #C9AEC7;
+  --color-peach: #FCC7B5;
+  --color-periwinkle: #8E9FD5;
+  --color-blue-deep: #265484;
+  --color-slate: #3C5A81;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+}

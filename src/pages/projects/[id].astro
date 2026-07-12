@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { id: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<Layout title={project.data.title}>
+  <article class="mx-auto max-w-5xl px-6 py-16">
+    <a href="/" class="text-sm text-muted hover:text-ink">← Back home</a>
+
+    <h1 class="mt-6 font-display text-4xl leading-tight text-ink">
+      {project.data.title}
+    </h1>
+
+    <dl class="mt-8 grid grid-cols-2 gap-x-8 gap-y-4 rounded-2xl border border-line bg-card p-6 text-sm md:grid-cols-4">
+        {project.data.scale && (
+            <div>
+            <dt class="text-xs font-medium uppercase tracking-wide text-lavender-deep">Scale</dt>
+            <dd class="mt-1 text-ink">{project.data.scale}</dd>
+            </div>
+        )}
+        {project.data.methods && (
+            <div>
+            <dt class="text-xs font-medium uppercase tracking-wide text-lavender-deep">Methods</dt>
+            <dd class="mt-1 text-ink">{project.data.methods}</dd>
+            </div>
+        )}
+        {project.data.location && (
+            <div>
+            <dt class="text-xs font-medium uppercase tracking-wide text-lavender-deep">Where</dt>
+            <dd class="mt-1 text-ink">{project.data.location}</dd>
+            </div>
+        )}
+        {project.data.advisor && (
+            <div>
+            <dt class="text-xs font-medium uppercase tracking-wide text-lavender-deep">Advisor</dt>
+            <dd class="mt-1 text-ink">{project.data.advisor}</dd>
+            </div>
+        )}
+    </dl>
+
+    <div class="prose mt-10 prose-headings:font-display prose-headings:text-ink prose-h2:text-lavender-deep prose-p:text-muted prose-a:text-lavender-deep prose-strong:text-ink">
+      <Content />
+    </div>
+  </article>
+</Layout>

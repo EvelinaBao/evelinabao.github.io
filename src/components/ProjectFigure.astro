@@ -1,0 +1,61 @@
+---
+const { figure } = Astro.props;
+---
+
+{figure === "timeseries" && (
+  <svg viewBox="0 0 300 100" class="w-full block">
+    <polyline points="10,38 50,36 90,40 120,80 150,75 190,58 230,52 270,46 290,43" fill="none" stroke="#996C96" stroke-width="2.5"/>
+    <line x1="118" y1="12" x2="118" y2="92" stroke="#C9AEC7" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="124" y="22" font-size="9" fill="#6E4A6C" font-family="sans-serif">disruption</text>
+  </svg>
+)}
+
+{figure === "bars" && (
+  <svg viewBox="0 0 300 100" class="w-full block">
+    <rect x="40" y="28" width="44" height="54" fill="#996C96" rx="3"/>
+    <rect x="128" y="41" width="44" height="41" fill="#B58BB3" rx="3"/>
+    <rect x="216" y="54" width="44" height="28" fill="#C9AEC7" rx="3"/>
+    <text x="62" y="22" font-size="10" fill="#6E4A6C" text-anchor="middle" font-family="sans-serif">+20%</text>
+    <text x="150" y="35" font-size="10" fill="#6E4A6C" text-anchor="middle" font-family="sans-serif">+15%</text>
+    <text x="238" y="48" font-size="10" fill="#6E4A6C" text-anchor="middle" font-family="sans-serif">+10%</text>
+    <text x="62" y="94" font-size="8" fill="#8E7C8D" text-anchor="middle" font-family="sans-serif">belief</text>
+    <text x="150" y="94" font-size="8" fill="#8E7C8D" text-anchor="middle" font-family="sans-serif">policy</text>
+    <text x="238" y="94" font-size="8" fill="#8E7C8D" text-anchor="middle" font-family="sans-serif">action</text>
+  </svg>
+)}
+
+{figure === "twoline" && (
+  <svg viewBox="0 0 300 100" class="w-full block">
+    <polyline points="15,60 55,55 95,62 135,35 175,45 215,30 255,50 290,44" fill="none" stroke="#996C96" stroke-width="2"/>
+    <polyline points="15,75 55,72 95,78 135,60 175,68 215,55 255,70 290,66" fill="none" stroke="#8E9FD5" stroke-width="2"/>
+    <line x1="150" y1="12" x2="150" y2="92" stroke="#C9AEC7" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="156" y="22" font-size="9" fill="#6E4A6C" font-family="sans-serif">election</text>
+  </svg>
+)}
+
+{figure === "network" && (
+  <svg viewBox="0 0 300 100" class="w-full block">
+    <line x1="60" y1="50" x2="130" y2="30" stroke="#C9AEC7" stroke-width="1"/>
+    <line x1="60" y1="50" x2="120" y2="75" stroke="#C9AEC7" stroke-width="1"/>
+    <line x1="130" y1="30" x2="200" y2="45" stroke="#C9AEC7" stroke-width="1"/>
+    <line x1="120" y1="75" x2="200" y2="45" stroke="#C9AEC7" stroke-width="1"/>
+    <line x1="200" y1="45" x2="255" y2="25" stroke="#C9AEC7" stroke-width="1"/>
+    <line x1="200" y1="45" x2="260" y2="70" stroke="#C9AEC7" stroke-width="1"/>
+    <circle cx="60" cy="50" r="9" fill="#996C96"/>
+    <circle cx="130" cy="30" r="5" fill="#8E9FD5"/>
+    <circle cx="120" cy="75" r="5" fill="#8E9FD5"/>
+    <circle cx="200" cy="45" r="7" fill="#8E9FD5"/>
+    <circle cx="255" cy="25" r="4" fill="#C9AEC7"/>
+    <circle cx="260" cy="70" r="4" fill="#C9AEC7"/>
+  </svg>
+)}
+
+{figure === "alignment" && (
+  <svg viewBox="0 0 300 100" class="w-full block">
+    <text x="14" y="36" font-size="9" fill="#8E7C8D" font-family="sans-serif">human</text>
+    <text x="14" y="74" font-size="9" fill="#8E7C8D" font-family="sans-serif">GPT-4</text>
+    <circle cx="70" cy="32" r="6" fill="#996C96"/><circle cx="105" cy="32" r="6" fill="#996C96"/><circle cx="140" cy="32" r="6" fill="#996C96"/><circle cx="175" cy="32" r="6" fill="#996C96"/><circle cx="210" cy="32" r="6" fill="#996C96"/><circle cx="245" cy="32" r="6" fill="#996C96"/>
+    <circle cx="70" cy="70" r="6" fill="#996C96"/><circle cx="105" cy="70" r="6" fill="#996C96"/><circle cx="140" cy="70" r="6" fill="#C9AEC7"/><circle cx="175" cy="70" r="6" fill="#996C96"/><circle cx="210" cy="70" r="6" fill="#C9AEC7"/><circle cx="245" cy="70" r="6" fill="#996C96"/>
+    <line x1="70" y1="40" x2="70" y2="62" stroke="#C9AEC7" stroke-width="1"/><line x1="105" y1="40" x2="105" y2="62" stroke="#C9AEC7" stroke-width="1"/><line x1="175" y1="40" x2="175" y2="62" stroke="#C9AEC7" stroke-width="1"/><line x1="245" y1="40" x2="245" y2="62" stroke="#C9AEC7" stroke-width="1"/>
+  </svg>
+)}

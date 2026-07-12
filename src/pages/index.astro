@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Layout title="Evelina Bao">
+	<section class="mx-auto max-w-5xl px-6 py-20 grid md:grid-cols-[1.3fr_1fr] gap- items-center">
+		<div>
+			<p class="text-5xl font-semibold font-display text-ink">Evelina Bao</p>
+			<h1 class="font-display text-3xl leading-tight text-ink">
+			Why do millions of people suddenly feel — and act — as one?
+			</h1>
+			<p class="mt-6 text-lg text-muted leading-relaxed max-w-prose">
+			I'm Evelina Bao, a computational social scientist. I use NLP, large language models, and network science to study how emotions spread through communities and turn into collective action.
+			</p>
+			<div class="mt-8 flex gap-3">
+			<a href="/projects" class="rounded-lg bg-lavender px-5 py-2.5 text-sm font-medium text-white hover:bg-lavender-deep">
+				See my work
+			</a>
+			<a href="/resume.pdf" class="rounded-lg border border-line px-5 py-2.5 text-sm font-medium text-ink hover:bg-lavender/10">
+				Resume (PDF)
+			</a>
+			</div>
+		</div>
+
+		<div class="justify-self-center w-64 aspect-[4/5] overflow-hidden rounded-2xl border border-line bg-lavender-soft">
+			<img
+				src="/headshot.jpg"
+				alt="Portrait of Evelina Bao"
+				class="w-full h-full object-cover scale-150"
+			/>
+		</div>
+	</section>
+
+	<section class="mx-auto max-w-5xl px-6">
+		<h2 class="font-display text-3xl text-ink">Selected work</h2>
+		<div class="mt-8 grid gap-6 md:grid-cols-2">
+			{projects.map((project) => (
+				<ProjectCard
+					title={project.data.title}
+					description={project.data.description}
+					stat={project.data.stat}
+					methods={project.data.methods}
+					figure={project.data.figure}
+					image={project.data.image}
+					href={`/projects/${project.id}`}
+				/>
+			))}
+		</div>
+	</section>
+
+</Layout>
