@@ -1,0 +1,38 @@
+[
+  {
+    "id": "covid-shifts",
+    "citation": "Bao, Y. E. & Ashokkumar, A. Large-scale, long-lasting psychological shifts led by the COVID-19 pandemic across the U.S. revealed in social media conversation.",
+    "status": "in preparation",
+    "order": 1
+  },
+  {
+    "id": "anti-asian-discrimination",
+    "citation": "Bao, Y. E. & Duker, A. Coping with anti-Asian discrimination: how culture, perceived foreignness, and relative group status shape targets' emotional experiences.",
+    "status": "in preparation",
+    "order": 2
+  },
+  {
+    "id": "climate-emotion-combination",
+    "citation": "Bao, Y. E. & Vlasceanu, M. Does positive or negative emotion increase climate mitigation outcomes? Their combination!",
+    "status": "R&R · JEP: Applied",
+    "order": 3
+  },
+  {
+    "id": "climate-individualism",
+    "citation": "Goldwert, D., Bao, Y. E., Doell, K. C., Van Bavel, J. J., & Vlasceanu, M. The effects of climate action interventions along cultural individualism–collectivism.",
+    "status": "R&R · Global Environmental Change",
+    "order": 4
+  },
+  {
+    "id": "intellectual-humility",
+    "citation": "Gollwitzer, A., Bao, E., & Oettingen, G. (2024). Intellectual humility as a tool to combat false beliefs. British Journal of Social Psychology.",
+    "status": "published",
+    "order": 5
+  },
+  {
+    "id": "covid-donations",
+    "citation": "Bao, Y., Zhang, Y., & Wang, J. (2023). Exposure to COVID-19 and donations during the pandemic: the mediating roles of emotions and risk perception. Frontiers in Psychology.",
+    "status": "published",
+    "order": 6
+  }
+]

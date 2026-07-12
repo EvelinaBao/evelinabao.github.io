@@ -19,6 +19,26 @@ const { title = 'Evelina Bao' } = Astro.props;
 	<body class="bg-paper font-body text-ink">
 		<Nav />
 		<slot />
+		<footer id="contact" class="border-t border-line">
+			<div class="mx-auto max-w-5xl px-6 py-20 text-center">
+				<h2 class="font-display text-3xl text-ink">Want to chat?</h2>
+				<p class="mx-auto mt-4 max-w-prose text-muted">
+				Completing my PhD in May 2028 and open to conversations about research
+				scientist, quantitative UXR, and data science roles.
+				</p>
+				<a href="mailto:evelina.bao@nyu.edu" class="mt-8 inline-block rounded-lg bg-lavender px-6 py-3 text-sm font-medium text-white hover:bg-lavender-deep">
+				evelina.bao@nyu.edu
+				</a>
+				<div class="mt-10 flex flex-wrap justify-center gap-6 text-sm text-muted">
+				<a href="https://www.linkedin.com/in/yun-evelina-bao-a2b8b6351/" class="hover:text-lavender-deep">LinkedIn</a>
+				<a href="https://github.com/EvelinaBao" class="hover:text-lavender-deep">GitHub</a>
+				<a href="https://scholar.google.com/citations?user=N3jFHiEAAAAJ&hl=en&oi=ao" class="hover:text-lavender-deep">Google Scholar</a>
+				<a href="/resume.pdf" class="hover:text-lavender-deep">Resume</a>
+				<a href="/cv.pdf" class="hover:text-lavender-deep">CV</a>
+				</div>
+				<p class="mt-10 text-xs text-muted/70">© 2026 Yun (Evelina) Bao</p>
+			</div>
+		</footer>
 	</body>
 </html>
 
