@@ -15,6 +15,6 @@ order: 1
 When a society is hit by a massive disruption, does the psychological impact fade — or leave lasting traces?
 
 <figure>
-  <img src="/figures/reddit_neg_emo.png" alt="Shift in negative emoions across eight years of Reddit data" />
-  <figcaption>Population-level negative emotions increases sharply at pandemic onset and recovers only partially over the following years.</figcaption>
+<img src="/figures/reddit_neg_emo.png" alt="Shift in negative emoions across eight years of Reddit data" />
+<figcaption>Population-level negative emotions increases sharply at pandemic onset and recovers only partially over the following years.</figcaption>
 </figure>
